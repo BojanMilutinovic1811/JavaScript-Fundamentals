@@ -15,24 +15,26 @@
 
 <body>
 
-    <div class="row">
-        <div class="col-md-8 mx-auto">
-            <h1 class='text-center'>Movie Festival</h1>
-            <form id='movie' class='border rounded border-dark p-3'>
-                <h4 class='text-muted'>Please fill in the form</h4>
-                <h5 class="text-muted mt-3">Movie</h5>
-                <div class="border rounded border-success p-3">
+    <div class="row bg-dark">
+        <div class="col-md-8 bg-light my-5 rounded mx-auto">
+            <h1 class='text-center display-4'>Movie Festival</h1>
+            <form id='movie-form' class='border rounded border-dark mb-5 p-3'>
+                
+                <h5 class="text-muted mt-3" id='alertHolder1'>Movie</h5>
+                <div class="border rounded border-success p-3" >
                     <div class="form-group p-2">
                         <label for="title">Title</label>
                         <input type="text" placeholder="title..." id='title' class="form-control">
                     </div>
-                    <div class="form-group p-2">
+                    <div class="row">
+                    <div class="form-group p-2 col-md-6">
                         <label for="length">Length (min)</label>
                         <input type="text" placeholder="length..." id='length' class="form-control">
                     </div>
-                    <div class="form-group p-2">
-                        <label for="genre">Select a genre</label>
+                    <div class="form-group p-2 col-md-6">
+                        <label for="genre">Genre</label>
                         <select id="genre" class="form-control">
+                            <option></option>
                             <option>Action</option>
                             <option>Drama</option>
                             <option>Horror</option>
@@ -40,12 +42,13 @@
                             <option>Science Fiction</option>
                         </select>
                     </div>
-                    <button class="btn btn-success btn-block text-white">Create movie</button>
                 </div>
-                <div class="list-group" id='movie-list'>
-
+                    <button id='movie' class="btn btn-success btn-block text-white">Create movie</button>
                 </div>
-                <h5 class="text-muted mt-3">Program</h5>
+                <h5 class='text-muted p-3'>List of movies</h5>
+                <ul class="list-group  border-bottom border-success" id='movie-list'>
+                </ul>
+                <h5 class="text-muted mt-3" id='alertHolder2'>Program</h5>
                 <div class="border rounded border-success p-3">
                     <form class="form-inline">
                         <div class="row">
@@ -59,22 +62,31 @@
                             </div>
                         </div>
                         <button class="btn btn-success btn-block text-white" id='create-program'>Create program</button>
-                    </form>
-                    <hr class='my-4'>
-                    <div class="form-group p2">
-                        <label for="movie">Movie</label>
-                        <select name="movie" id="movieOption" class="form-control">
-
-                        </select>
                     </div>
-                    <div class="form-group p2">
-                        <label for="program">Program</label>
-                        <select name="program" id="program" class="form-control">
-                            <option></option>
-                        </select>
+                        <h5 class='text-muted p-3'>List of programs</h5>
+                        <ul class="list-group  border-bottom border-success" id='program-list'>
+                        </ul>
+        
+                        <h5 class="text-muted mt-3" id='alertHolder3'>Add movie to program and create a festival</h5>
+                        <div class="border rounded border-success p-3">
+                        <div class="form-group p2">
+                            <label for="movie">Movie</label>
+                            <select name="movie" id="movieOption" class="form-control">
+                                
+                            </select>
+                        </div>
+                        <div class="form-group p2">
+                            <label for="program">Program</label>
+                            <select name="program" id="program" class="form-control">
+                                
+                            </select>
+                        </div>
+                        <button class="btn btn-success btn-block text-white" id='movieAdd'>Add</button>
                     </div>
-                    <button class="btn btn-success btn-block text-white">Add movie to program</button>
-                </div>
+                        <h5 class='text-muted p-3' >Festivals</h5>
+                        <ul class="list-group  border-bottom border-success" id='program-collection'>
+                        </ul>
+                </form>
         </div>
     </div>
     <!-- Optional JavaScript -->
