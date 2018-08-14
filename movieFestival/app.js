@@ -32,6 +32,8 @@ function createMovie(e) {
         ui = new UI();
         if(movieTitle === '' || movieLength ==='' || movieGenre === '') {
             ui.showAlert('Please fill in required movie fields!', 'danger', 'alertHolder1');
+        } else if(movieLength.length>3){
+            ui.showAlert('Movie length has to be under 1000 mins!', 'danger', 'alertHolder1');
         } else {
             ui.createMovieElement(movie);
             
