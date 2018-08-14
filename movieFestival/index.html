@@ -18,31 +18,31 @@
     <div class="row bg-dark">
         <div class="col-md-8 bg-light my-5 rounded mx-auto">
             <h1 class='text-center display-4'>Movie Festival</h1>
-            <form id='movie-form' class='border rounded border-dark mb-5 p-3'>
-                
+            <form id='movie-form' class='mb-5 p-3'>
+
                 <h5 class="text-muted mt-3" id='alertHolder1'>Movie</h5>
-                <div class="border rounded border-success p-3" >
+                <div class="border rounded border-success p-3">
                     <div class="form-group p-2">
                         <label for="title">Title</label>
                         <input type="text" placeholder="title..." id='title' class="form-control">
                     </div>
                     <div class="row">
-                    <div class="form-group p-2 col-md-6">
-                        <label for="length">Length (min)</label>
-                        <input type="text" placeholder="length..." id='length' class="form-control">
+                        <div class="form-group p-2 col-md-6">
+                            <label for="length">Length (min)</label>
+                            <input type="text" placeholder="length..." id='length' class="form-control">
+                        </div>
+                        <div class="form-group p-2 col-md-6">
+                            <label for="genre">Genre</label>
+                            <select id="genre" class="form-control">
+                                <option></option>
+                                <option>Action</option>
+                                <option>Drama</option>
+                                <option>Horror</option>
+                                <option>Comedy</option>
+                                <option>Science Fiction</option>
+                            </select>
+                        </div>
                     </div>
-                    <div class="form-group p-2 col-md-6">
-                        <label for="genre">Genre</label>
-                        <select id="genre" class="form-control">
-                            <option></option>
-                            <option>Action</option>
-                            <option>Drama</option>
-                            <option>Horror</option>
-                            <option>Comedy</option>
-                            <option>Science Fiction</option>
-                        </select>
-                    </div>
-                </div>
                     <button id='movie' class="btn btn-success btn-block text-white">Create movie</button>
                 </div>
                 <h5 class='text-muted p-3'>List of movies</h5>
@@ -62,30 +62,30 @@
                             </div>
                         </div>
                         <button class="btn btn-success btn-block text-white" id='create-program'>Create program</button>
+                </div>
+                <h5 class='text-muted p-3'>List of programs</h5>
+                <ul class="list-group  border-bottom border-success" id='program-list'>
+                </ul>
+
+                <h5 class="text-muted mt-3" id='alertHolder3'>Add movie to program and create a festival</h5>
+                <div class="border rounded border-success p-3">
+                    <div class="form-group p2">
+                        <label for="movie">Movie</label>
+                        <select name="movie" id="movieOption" class="form-control">
+
+                        </select>
                     </div>
-                        <h5 class='text-muted p-3'>List of programs</h5>
-                        <ul class="list-group  border-bottom border-success" id='program-list'>
-                        </ul>
-        
-                        <h5 class="text-muted mt-3" id='alertHolder3'>Add movie to program and create a festival</h5>
-                        <div class="border rounded border-success p-3">
-                        <div class="form-group p2">
-                            <label for="movie">Movie</label>
-                            <select name="movie" id="movieOption" class="form-control">
-                                
-                            </select>
-                        </div>
-                        <div class="form-group p2">
-                            <label for="program">Program</label>
-                            <select name="program" id="program" class="form-control">
-                                
-                            </select>
-                        </div>
-                        <button class="btn btn-success btn-block text-white" id='movieAdd'>Add</button>
+                    <div class="form-group p2">
+                        <label for="program">Program</label>
+                        <select name="program" id="program" class="form-control">
+
+                        </select>
                     </div>
-                        <h5 class='text-muted p-3' >Festivals</h5>
-                        <ul class="list-group  border-bottom border-success" id='program-collection'>
-                        </ul>
+                    <button class="btn btn-success btn-block text-white" id='movieAdd'>Add</button>
+                </div>
+                <h5 class='text-muted p-3'>Festivals</h5>
+                <ul class="list-group  border-bottom border-success" id='program-collection'>
+                </ul>
                 </form>
         </div>
     </div>
@@ -97,6 +97,7 @@
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
+    <script src="ui.js"></script>
     <script src="app.js"></script>
 </body>
 
