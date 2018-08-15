@@ -36,6 +36,7 @@ function createMovie(e) {
             ui.showAlert('Movie length has to be under 1000 mins!', 'danger', 'alertHolder1');
         } else {
             ui.createMovieElement(movie);
+            Store.setMovieData(movie);
             
         }
 
@@ -56,8 +57,7 @@ function createProgram (e) {
               ui.showAlert('Please fill in required program fields!', 'danger', 'alertHolder2');
           } else {
               ui.createProgramElement(program);
-              festivalList.push(program);
-               
+              festivalList.push(program); 
           }
           (function () {
             document.getElementById('program-name').value = '';
@@ -69,7 +69,7 @@ function createProgram (e) {
 }
 
 
-   function addMovie(e) {
+   function createFestival(e) {
     const movieForProgram = document.getElementById('movieOption').value,
           programOption = document.getElementById('program').value;
           const ui = new UI();
@@ -83,22 +83,20 @@ function createProgram (e) {
                   program.list.push(movieForProgram)
                   program.duration += movieLength;
               }
-              
               ui.createFestivalElement(program)
-
-
           })
- 
-       
           e.preventDefault();
 }
 
 
 function removeListItem(e) {
     e.target.parentElement.parentElement.remove();
+    Store.removeMovieData(e.target.parentElement.parentElement.textContent)
 
 }
 
+
+document.addEventListener('DOMContentLoaded', Store.displayMovies);
 
 document.querySelectorAll('ul').forEach(ul => ul.addEventListener('click',removeListItem));
 
@@ -106,4 +104,4 @@ document.getElementById('movie').addEventListener('click', createMovie);
 
 document.getElementById('create-program').addEventListener('click', createProgram);
 
-document.getElementById('movieAdd').addEventListener('click', addMovie);
+document.getElementById('movieAdd').addEventListener('click', createFestival);

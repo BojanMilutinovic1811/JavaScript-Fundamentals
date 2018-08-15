@@ -1,13 +1,17 @@
 class UI {
 
     createMovieElement(movie) {
+        
+        const shortGenre = (movie.genre.charAt(0) + movie.genre.charAt(movie.genre.length - 1)).toUpperCase();
+        const movieData = `${movie.title}, ${movie.duration} min, ${shortGenre}`;
         const movieOption = document.createElement('option');
-        movieOption.innerHTML = movie.movieData();
+        movieOption.innerHTML = movieData;
+         
         const select = document.getElementById('movieOption');
         select.appendChild(movieOption);
         const movieLi = document.createElement('li');
         movieLi.className = 'list-group-item list-group-item-action list-group-item-success';
-        movieLi.innerHTML = `${movie.movieData()} <button type="button" class="close" aria-label="Close">
+        movieLi.innerHTML = `${movieData} <button type="button" class="close" aria-label="Close">
         <span aria-hidden="true">&times;</span>
       </button>`;
         const movieList = document.getElementById('movie-list');
@@ -33,7 +37,7 @@ class UI {
     createFestivalElement(program) {
 
         const festivalList = document.getElementById('program-collection');
-        festivalList.innerHTML = `
+        festivalList.innerHTML += `
             <li class="list-group-item list-group-item-action list-group-item-success">${program.name}  - movies in this program: ${program.list.length}, with total duration of: ${program.duration} min.<button type="button" class="close" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button></li>
