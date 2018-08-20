@@ -1,0 +1,14 @@
+body {
+    padding: 2%; 
+    text-align: center;
+    background-image: linear-gradient(to right, red , yellow);
+    color: rgba(00, 00, 00, 0.6);
+    text-transform: uppercase;
+}
+
+
+h1 {
+    font-size: 4rem;
+    letter-spacing: 0.3rem; 
+    color: rgba(00, 00, 00, 0.6)
+}

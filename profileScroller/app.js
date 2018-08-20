@@ -1,10 +1,10 @@
-//  let addressAPI = 'https://randomuser.me/api/?results=50'
-//  let data = [];
-//  fetch(addressAPI)
-//  .then(info => info.json())
-//  .then(res => {
-//     res.results.forEach(user=>data.push(user))
-//  });
+ let addressAPI = 'https://randomuser.me/api/?results=50'
+ 
+  
+ 
+ 
+ 
+
 
 const data = [{
         name: 'John Doe',
@@ -33,6 +33,7 @@ const data = [{
 ];
 
 const profiles = profileIterator(data);
+// console.log(profiles.next().value)
 
 document.getElementById('next').addEventListener('click', nextUser);
 
@@ -54,13 +55,15 @@ function nextUser() {
         document.getElementById('imageDisplay').innerHTML = `
         <img src='${nextUser.image}'>
     `
-    } else {
-        window.location.reload();
-    }
+     } 
+    //  else {
+    //     window.location.reload();
+    // }
 }
 
 function profileIterator(profiles) {
     let profileIndex = 0;
+   
 
     return {
         next: function () {
