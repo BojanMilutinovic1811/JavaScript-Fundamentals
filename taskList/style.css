@@ -1,0 +1,14 @@
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(shiningBackground.jpg) center center/cover;
+}
+
+.container {
+    max-width: 600px;
+    opacity: 0.97;
+}
