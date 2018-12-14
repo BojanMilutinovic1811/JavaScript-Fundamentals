@@ -31,6 +31,7 @@ class UI {
     }
 
     showAlert(message, className) {
+        if(!document.querySelector('.alert')) {
         const alert = document.createElement('div');
         alert.className = className;
         alert.textContent = message;
@@ -38,14 +39,47 @@ class UI {
         container.insertBefore(alert, this.post)
         setTimeout(()=> {
             document.querySelector('.alert').remove()
-        }, 1000)
+        }, 2000)
     }
-
-
+    }
 
     clearFields() {
         this.titleInput.value = '';
         this.bodyInput.value = '';
+    }
+
+    editPost(data) {
+        this.titleInput.value = data.title;
+        this.bodyInput.value = data.body;
+        this.id.value = data.id; 
+
+        this.changeState('edit');
+    }
+
+    changeState(type) {
+        if(type === 'edit') {
+          
+            this.postSubmit.classList = 'btn btn-warning btn-block post-submit';
+            this.postSubmit.value = 'Edit post';
+
+            
+                const button = document.createElement('button');
+                button.textContent = 'Cancel edit';
+                button.classList = 'btn btn-danger btn-block post-cancel';
+            
+           
+
+           const formEnd = document.querySelector('.form-end');
+           const cardForm = document.querySelector('.card-form');
+           cardForm.insertBefore(button, formEnd)
+           
+        } else {
+            this.postSubmit.classList = 'btn btn-success btn-block post-submit';
+            this.postSubmit.value = 'Post it';
+
+            if(document.querySelector('.post-cancel')) document.querySelector('.post-cancel').remove()
+            this.clearFields();
+        }
     }
 }
 
