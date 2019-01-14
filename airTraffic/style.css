@@ -6,12 +6,18 @@
     list-style: none;
 }
 
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif    
+
+}
+
 
 .welcome {
     background: url('./cropped.jpg') center center/cover;
     min-height: 100vh;
     text-align: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    position: relative;
+    padding: 10px 15px;
 
 }
 
@@ -21,19 +27,33 @@
     margin-bottom: 40px;
     text-transform: uppercase;
     letter-spacing: 3px;
+    opacity: 0;
+    animation: 2s start ease-in-out forwards;
+    transform: scale(.3);
+    font-family: 'Coiny', cursive;
 }
 
+
+@keyframes start {
+    100% {
+        opacity: .8;
+        margin-top: 0;
+        transform: scale(1)
+    }
+}
 .prompt {
     max-width: 600px;
-    border: black 1px solid;
     padding: 20px;
     margin: auto;
-    background: rgba(0, 0, 0, 1);
+    background: black;
     color: white;
     border-radius: 8px;
     opacity: .8;
     font-size: 110%;
     line-height: 110%;
+    opacity: 0;
+    margin-top: 100px;
+    animation: start 5s forwards;
 }
 
 .prompt p {

@@ -31,8 +31,8 @@ function back() {
 
 function fetchData() {
     navigator.geolocation.getCurrentPosition(function(position) {
-        const latitude = position.coords.latitude;
-        const longitude = position.coords.longitude;
+        const latitude = position.coords.latitude.toFixed(6);
+        const longitude = position.coords.longitude.toFixed(6);
         prompt.innerHTML = `
         <p>This is your current longitude: ${longitude}</p>
         <p>This is your current latitude: ${latitude}</p>
@@ -41,5 +41,8 @@ function fetchData() {
         </div>
         `;
         back();
+    
+
+      
 
 })}
