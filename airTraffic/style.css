@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+
+.welcome {
+    background: url('./cropped.jpg') center center/cover;
+    min-height: 100vh;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+
+}
+
+.title {
+    font-size: 400%;
+    padding: 30px 0;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.prompt {
+    max-width: 600px;
+    border: black 1px solid;
+    padding: 20px;
+    margin: auto;
+    background: rgba(0, 0, 0, 1);
+    color: white;
+    border-radius: 8px;
+    opacity: .8;
+    font-size: 110%;
+    line-height: 110%;
+}
+
+.prompt p {
+    text-align: justify;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    line-height: 22px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    margin: 20px auto;
+}
+
+.buttons button {
+    padding: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    min-width: 150px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 0 10px;
+}

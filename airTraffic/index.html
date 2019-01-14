@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Air Traffic</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class='welcome'>
+            <h1 class='title'>Air Traffic</h1>
+
+            <div class="prompt">
+                <p>Dear user, in order to use this app we need you to agree with our terms of service. Actually, we would like to use your geolocation so we could provide you the information about air traffic within your vicinity.</p>
+                <h4>Do you agree with our terms of service?</h4>
+                <div class="buttons">
+                        <button id="yes" onclick="fetchData()">Yes</button>
+                        <button id='no' onclick="negativeAnswer()">No</button>
+                </div>
+               
+            </div>
+    </section>
+    
+
+
+    <script src="./src/index.js"></script>
+</body>
+</html>
