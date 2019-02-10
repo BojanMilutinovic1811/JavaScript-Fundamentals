@@ -123,6 +123,17 @@
             }
         }
 
+        fetch('https://jsonplaceholder.typicode.com/users')
+        .then(response => response.json())
+        .then(data => data.forEach(user => {
+            const firstName = user.name.split(' ')[0];
+            const lastName = user.name.split(' ')[1];
+            const passenger = new Passenger(firstName,lastName)
+            console.log(passenger);
+        }));
+
+
+
     const passenger1 = new Passenger('Bojan', 'Milutinovic');
     const passenger2 = new Passenger('Bob', 'Rok');
     const passenger3 = new Passenger('Zagor', 'Tenej');
