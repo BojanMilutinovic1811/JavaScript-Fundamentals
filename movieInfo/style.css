@@ -1,0 +1,12 @@
+#movies img {
+    width: 100%;
+}
+
+@media(min-width: 960px) {
+    .well {
+        height: 390px;
+    }
+    #movies img {
+        height: 240px;
+    }
+}
