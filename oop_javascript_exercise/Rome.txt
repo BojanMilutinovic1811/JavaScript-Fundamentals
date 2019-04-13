@@ -1,0 +1,15 @@
+* List of passengers on flight to Rome:
+
+1. Alexanne Hudson with heavy luggage(2kg)
+2. Edwardo Haag with light luggage(1kg)
+3. Zoie Halvorson with heavy luggage(3kg)
+4. Carter Reichel with heavy luggage(3kg)
+5. Lyric Kohler with light luggage(1kg)
+6. Hillard Schumm with heavy luggage(5kg)
+7. Ubaldo Streich with heavy luggage(4kg)
+8. Angelica Von with heavy luggage(2kg)
+ 
+    
+* Total weight of lost 'heavy' luggage is: 2kg 
+    
+* List of passengers whose heavy luggage is lost:  Angelica Von

@@ -1,0 +1,16 @@
+* List of passengers on flight to Barcelona:
+
+1. Marcelle Kiehn with light luggage(1kg)
+2. Trisha Baumbach with heavy luggage(3kg)
+3. Viva Upton with heavy luggage(3kg)
+4. Princess Koepp with heavy luggage(3kg)
+5. Brandyn Gerhold with heavy luggage(3kg)
+6. Carlo D'Amore with heavy luggage(4kg)
+7. Leland Buckridge with light luggage(1kg)
+8. Jennie Mann with heavy luggage(5kg)
+9. Rick Gleichner with heavy luggage(3kg)
+ 
+    
+* Total weight of lost 'heavy' luggage is: 6kg 
+    
+* List of passengers whose heavy luggage is lost:  Princess Koepp, Rick Gleichner

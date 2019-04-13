@@ -1,0 +1,21 @@
+* List of passengers on flight to Belgrade:
+
+1. Quinten Harris with heavy luggage(3kg)
+2. Marietta Romaguera with heavy luggage(5kg)
+3. Imogene Stokes with heavy luggage(5kg)
+4. Janick Schmitt with light luggage(1kg)
+5. Lily Schuppe with heavy luggage(5kg)
+6. Cristopher Mitchell with light luggage(1kg)
+7. Leo Langworth with heavy luggage(3kg)
+8. Murray Bartoletti with heavy luggage(4kg)
+9. Emerson Boyer with heavy luggage(2kg)
+10. Tatyana Roob with heavy luggage(4kg)
+11. Hadley Dickinson with heavy luggage(2kg)
+12. Gerson Batz with heavy luggage(2kg)
+13. Howard Lakin with light luggage(1kg)
+14. Dedric Mosciski with heavy luggage(2kg)
+ 
+    
+* Total weight of lost 'heavy' luggage is: 6kg 
+    
+* List of passengers whose heavy luggage is lost:  Tatyana Roob, Gerson Batz

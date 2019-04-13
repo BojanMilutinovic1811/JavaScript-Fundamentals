@@ -1,4 +1,5 @@
 const Passenger = require('./Passenger')
+const fs = require('fs')
 
 class Flight {
   constructor (flightName, flyList) {
@@ -6,18 +7,20 @@ class Flight {
     this.flyList = flyList
   }
 
-  flightInfo () {
-    let listOfPassengers = []
+  flightInfo (option) {
+    let listOfPassengers = ''
+    let passengersCounter = 1
     let passengersWithLostLuggage = []
     let lostLuggageWeight = 0
 
     this.flyList.forEach(person => {
       if (person instanceof Passenger) {
-        listOfPassengers.push(
-          ` ${person.name} ${person.lastname} with ${
-            person.luggage.luggageType
-          } luggage(${person.luggage.luggageWeight}kg)`
-        )
+        listOfPassengers += `${passengersCounter}. ${person.name} ${
+          person.lastname
+        } with ${person.luggage.luggageType} luggage(${
+          person.luggage.luggageWeight
+        }kg)\n`
+        passengersCounter++
       }
     })
 
@@ -34,11 +37,17 @@ class Flight {
       }
     })
 
-    console.log(
-      `* List of passengers on flight to ${this.name}: ${listOfPassengers} 
-        \n* Total weight of lost 'heavy' luggage is: ${lostLuggageWeight}kg 
-        \n* List of passengers whose heavy luggage is lost: ${passengersWithLostLuggage}`
-    )
+    const report = `* List of passengers on flight to ${
+      this.name
+    }:\n\n${listOfPassengers} 
+    \n* Total weight of lost 'heavy' luggage is: ${lostLuggageWeight}kg 
+    \n* List of passengers whose heavy luggage is lost: ${passengersWithLostLuggage}`
+
+    if (option === 'print') {
+      fs.writeFileSync(`${this.name}.txt`, report)
+    } else {
+      console.log(report)
+    }
   }
 }
 
